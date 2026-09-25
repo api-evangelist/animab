@@ -1,23 +1,66 @@
 aid: animab
+
 name: Animab
-description: 'Animab is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Animab is a biotechnology company that develops oral antibody technologies to improve gut health in livestock, particularly piglets during the post‑weaning stage. By mimicking secretory IgA, its products aim to reduce infections, lower antimicrobial use, and enhance animal performance, supporting sustainable agriculture and better feed conversion.'
+
 url: https://raw.githubusercontent.com/api-evangelist/animab/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
-- Company
-apis: []
+- Biotechnology
+- Animal Health
+- Livestock
+- Oral Antibodies
+- Gut Health
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/animab-hosts.yml
+- type: Vendors
+  url: vendors/animab-vendors.yml
+- type: Leadership
+  url: https://animab.com/team
+- type: DomainSecurity
+  url: security/animab-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/animab
+  url: https://animab.com
+- type: Documentation
+  url: https://animab.com/technology
+- type: Image
+  url: https://animab.com/favicon.ico
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
